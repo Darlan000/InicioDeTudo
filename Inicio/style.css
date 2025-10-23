@@ -1,0 +1,236 @@
+/* Configurações Globais e Variáveis - TEMA ESCURO ANIMADO E ELEGANTE (TAMANHO REDUZIDO - LAYOUT EMPILHADO) */
+:root {
+    /* Paleta escura rica e confortável (Dark Blue / Petróleo) */
+    --cor-fundo-principal: #111621; 
+    --cor-fundo-secundario: #1D2635; 
+    --cor-texto-principal: #E0E7FF; /* Branco suave para conforto */
+    --cor-texto-secundario: #A9B3C7; 
+    /* Destaque Futurista/Anime (Magenta Vibrante) */
+    --cor-destaque: #FF0077; 
+    --cor-borda-separacao: #30363D;
+    --cor-botao-fundo: #2A313C; 
+    
+    /* Variável para animações */
+    --duracao-transicao: 0.3s; /* Transição mais rápida */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; 
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    line-height: 1.5;
+    font-size: 14px; /* TAMANHO BASE REDUZIDO */
+    transition: background-color var(--duracao-transicao);
+}
+
+.container {
+    width: 90%;
+    max-width: 900px; /* MAX-WIDTH PARA VISUAL MAIS FOCO */
+    margin: 0 auto;
+    padding: 15px 0; 
+}
+
+/* HEADER (Sutil) */
+header {
+    background-color: var(--cor-fundo-secundario);
+    border-bottom: 1px solid var(--cor-borda-separacao);
+    padding: 10px 0; 
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.4em; 
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px; 
+}
+
+nav ul li a {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--duracao-transicao);
+    font-size: 1.0em; 
+}
+
+nav ul li a:hover {
+    color: var(--cor-destaque);
+    text-shadow: 0 0 4px var(--cor-destaque); 
+}
+
+/* MAIN CONTENT */
+main {
+    padding-top: 30px; 
+    min-height: 70vh;
+}
+
+section {
+    padding: 30px 0; 
+    border-bottom: 1px solid var(--cor-borda-separacao);
+}
+
+h2 {
+    font-size: 1.6em; 
+    text-align: center;
+    margin-bottom: 25px; 
+    font-weight: 300;
+    color: var(--cor-destaque);
+    letter-spacing: 1px;
+}
+
+#apresentacao {
+    padding: 40px 0; 
+}
+
+#apresentacao h2 {
+    font-size: 2.0em; 
+    font-weight: 700;
+    color: var(--cor-texto-principal); 
+}
+
+#apresentacao p {
+    font-size: 1.0em; 
+    max-width: 600px; 
+    margin: 0 auto; /* Garante que o parágrafo esteja centralizado */
+}
+
+/* CARDS DE PROJETOS - VOLTANDO AO LAYOUT EMPILHADO (1x3) */
+#projetos {
+    /* Define Flexbox no container pai (section.container) */
+    display: flex;
+    flex-direction: column; /* Empilha os itens */
+    gap: 20px; /* Espaço entre os cards */
+    align-items: center; /* Centraliza os cards horizontalmente */
+    width: 100%;
+}
+
+/* Se você manteve o div.cards-wrapper no HTML, vamos aplicar o layout aqui para não ter problemas */
+.cards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+
+.projeto-card {
+    /* No layout empilhado, definimos um max-width para não estourar a tela */
+    width: 100%;
+    max-width: 600px; 
+    
+    background-color: var(--cor-fundo-secundario);
+    padding: 20px 25px; 
+    border-radius: 6px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    border-left: 4px solid var(--cor-destaque); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+
+.projeto-card:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.6), 0 0 8px rgba(255, 0, 119, 0.4); 
+    border-left-color: var(--cor-texto-principal);
+}
+
+.projeto-card h3 {
+    margin-bottom: 8px; 
+    font-size: 1.2em; 
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.projeto-card p {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 15px; 
+    font-size: 0.9em; 
+}
+
+/* Estilo do link que funciona como botão */
+.btn-detalhes {
+    display: inline-block; 
+    background-color: var(--cor-botao-fundo);
+    color: var(--cor-destaque);
+    padding: 8px 16px; 
+    border: 1px solid var(--cor-destaque); 
+    border-radius: 20px; 
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.8em; 
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: background-color var(--duracao-transicao), color var(--duracao-transicao), box-shadow var(--duracao-transicao);
+}
+
+.btn-detalhes:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-principal);
+    box-shadow: 0 0 6px var(--cor-destaque); 
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--cor-fundo-secundario);
+    padding: 15px 0; 
+    text-align: center;
+    border-top: 1px solid var(--cor-borda-separacao);
+    font-size: 0.8em; 
+}
+
+footer p {
+    margin: 3px 0;
+    color: var(--cor-texto-secundario);
+}
+
+footer a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    transition: color var(--duracao-transicao);
+}
+
+footer a:hover {
+    color: var(--cor-texto-principal);
+}
+
+/* ANIMAÇÕES DE ENTRADA (CSS) - Usado com o script.js */
+.hidden {
+    opacity: 0;
+    transform: translateY(15px); 
+}
+
+.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out; 
+}
+
+/* MEDIA QUERIES (Responsividade) */
+@media (max-width: 768px) {
+    body {
+        font-size: 13px; 
+    }
+    
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

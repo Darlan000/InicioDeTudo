@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dados de Boneco</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="container-principal">
+        <h1>Dados de Boneco</h1>
+
+        <div class="aviso-dimensoes aviso-escondido" id="aviso-dimensoes">
+            Atenção: O desenho pode não caber no papel.
+        </div>
+
+        <div class="form-container">
+            <h3>Medidas do Livro</h3>
+            <label for="largura">Largura (mm):</label>
+            <input type="number" id="largura" value="157">
+
+            <label for="altura">Altura (mm):</label>
+            <input type="number" id="altura" value="230">
+
+            <label for="lombada">Largura da lombada (mm):</label>
+            <input type="number" id="lombada" value="20">
+        </div>
+        
+        <button id="btn-calcular">Calcular</button>
+        <button id="btn-imprimir">Gerar PDF</button> </div>
+
+    <div id="container-boneco">
+        <div id="boneco-container">
+            <div id="retangulo-interno-esquerda">
+                <span class="dimensoes" id="dim-esquerda-largura"></span>
+                <span class="dimensoes" id="dim-esquerda-altura"></span>
+            </div>
+            <div id="retangulo-lombada">
+                <span class="dimensoes" id="dim-lombada-largura"></span>
+            </div>
+            <div id="retangulo-interno-direita">
+                <span class="dimensoes" id="dim-direita-largura"></span>
+                <span class="dimensoes" id="dim-direita-altura"></span>
+            </div>
+            <div id="retangulo-regua">
+                <span class="dimensoes" id="dim-regua-largura"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

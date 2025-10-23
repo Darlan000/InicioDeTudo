@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gabarito de Capa de Livro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+    <div class="container-principal">
+        <h1>Gabarito de Capa de Livro</h1>
+        
+        <div class="aviso-dimensoes" id="aviso-dimensoes">
+            As dimensões excedem o espaço disponível na tela. O gabarito no PDF será exibido corretamente.
+        </div>
+
+        <div class="form-container">
+            <h3>Medidas do Livro (mm)</h3>
+            <label for="largura">Largura da Capa:</label>
+            <input type="number" id="largura" value="157">
+
+            <label for="altura">Altura da Capa:</label>
+            <input type="number" id="altura" value="230">
+
+            <label for="lombada">Largura da Lombada:</label>
+            <input type="number" id="lombada" value="20">
+
+            <label for="largura-orelha">Largura da Orelha:</label>
+            <input type="number" id="largura-orelha" value="80">
+
+            <div class="opcoes-orelha">
+                <label>
+                    <input type="checkbox" id="tem-orelha-esquerda" checked> Orelha Esquerda
+                </label>
+                <label>
+                    <input type="checkbox" id="tem-orelha-direita" checked> Orelha Direita
+                </label>
+                <label>
+                    <input type="checkbox" id="tem-debrum"> Habilitar Debrum (15mm)
+                </label>
+            </div>
+        </div>
+        
+        <button id="btn-calcular">Calcular</button>
+        <button id="btn-imprimir">Gerar PDF</button>
+    </div>
+
+    <div id="container-gabarito">
+        <div id="gabarito-container">
+            <div id="orelha-esquerda"></div>
+            <div id="retangulo-interno-esquerda"></div>
+            <div id="retangulo-lombada"></div>
+            <div id="retangulo-interno-direita"></div>
+            <div id="orelha-direita"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
